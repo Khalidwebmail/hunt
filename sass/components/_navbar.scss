@@ -1,6 +1,10 @@
 .navbar{
-    background-color: #000;
-    border-bottom: 1px solid $border_color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    border-bottom: 1px solid $menu_border_color;
     .navbar-nav {
         .nav-item{
             @include padding_gap(16px, 16px, 0, 0);

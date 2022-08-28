@@ -13,8 +13,12 @@ ul, ol, li {
 }
 
 .navbar {
-  background-color: #000;
-  border-bottom: 1px solid #7d653a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  border-bottom: 1px solid #fec600;
 }
 .navbar .navbar-nav .nav-item {
   padding-left: 16px;
@@ -54,4 +58,144 @@ ul, ol, li {
 .navbar .navbar-nav .nav-item .nav-link:hover:after {
   transform-origin: left center;
   transform: scale(1, 1);
+}
+
+#banner {
+  position: relative;
+}
+#banner .banner-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#banner .banner-overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.432);
+}
+#banner .banner-overlay .banner-btn a {
+  width: 130px;
+  height: 50px;
+  display: inline-block;
+  border: 1px solid #fff;
+  font-family: "Raleway";
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 24px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 10px;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+#banner .banner-overlay .banner-btn a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -107px;
+  width: 0%;
+  height: 100%;
+  background-color: #fec600;
+  z-index: -1;
+  transform: skew(-20deg);
+  transition: all ease 0.4s;
+}
+#banner .banner-overlay .banner-btn a:hover {
+  border-color: #fec600;
+  color: #222222;
+}
+#banner .banner-overlay .banner-btn a:hover::after {
+  left: -10px;
+  width: 120%;
+}
+#banner .banner-overlay .banner-btn a:last-child {
+  margin-right: 0;
+}
+#banner .banner-txt h2 {
+  font-family: "Raleway";
+  font-size: 36px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: capitalize;
+  line-height: 30px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 11px;
+}
+#banner .banner-txt h1 {
+  font-family: "Raleway";
+  font-size: 55px;
+  font-weight: 700;
+  color: #fec600;
+  text-transform: uppercase;
+  line-height: 30px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 11px;
+  padding-bottom: 15px;
+}
+#banner .banner-txt p {
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 100;
+  color: #fff;
+  line-height: 24px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 15px;
+  padding-bottom: 0;
+}
+#banner .left {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translateY(-50%);
+  z-index: 1;
+  color: #1c1416;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  line-height: 36px;
+  font-size: 24px;
+  background-color: white;
+  text-align: center;
+  transition: all linear 0.3s;
+}
+#banner .left:hover {
+  background-color: #fec600;
+  cursor: pointer;
+}
+#banner .right {
+  position: absolute;
+  top: 50%;
+  right: 60px;
+  transform: translateY(-50%);
+  z-index: 1;
+  color: #1c1416;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  line-height: 36px;
+  font-size: 24px;
+  background-color: white;
+  text-align: center;
+  transition: all linear 0.3s;
+}
+#banner .right:hover {
+  background-color: #fec600;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
